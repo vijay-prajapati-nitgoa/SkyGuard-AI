@@ -1,61 +1,85 @@
-SkyGuard AI – Aerial Object Classification System
- Overview
+# 🛰️ SkyGuard AI – Aerial Object Classification System
 
-SkyGuard AI is a deep learning-based system that classifies aerial images into Bird 🐦 or Drone 🚁.
+## 📌 Overview
+SkyGuard AI is a deep learning-based system that classifies aerial images into:
 
-This project helps in:
+- 🐦 Bird  
+- 🚁 Drone  
 
-✈️ Airport safety (bird strike prevention)
-🛡️ Security & defense surveillance
-🌿 Wildlife monitoring
-🚀 Features
- Binary image classification (Bird vs Drone)
- Transfer Learning using MobileNetV2
- Real-time prediction using Streamlit
- Confidence score display
- Clean and user-friendly UI
- Tech Stack
-Python
-TensorFlow / Keras
-Streamlit
-NumPy
-OpenCV
-Scikit-learn
-📂 Dataset
-Binary classification dataset:
-Bird 🐦
-Drone 🚁
-📁 Structure:
+This system helps in:
+- ✈️ Airport safety (bird strike prevention)
+- 🛡️ Security & defense surveillance
+- 🌿 Wildlife monitoring
+
+---
+
+## 🚀 Features
+-  Binary Image Classification (Bird vs Drone)
+- Transfer Learning using MobileNetV2
+-  Real-time prediction using Streamlit
+-  Confidence score display
+-  Clean and user-friendly UI
+
+---
+
+## 🛠️ Tech Stack
+- Python  
+- TensorFlow / Keras  
+- Streamlit  
+- NumPy  
+- OpenCV  
+- Scikit-learn  
+
+---
+
+## 📂 Dataset
+
+
 train/
 valid/
 test/
-Images are resized to 224×224
-Pixel values normalized to [0,1]
- Model Architecture
-🔹 Custom CNN
-Convolution layers (32, 64, 128 filters)
-MaxPooling layers
-Dense layers + Dropout
-Output: Sigmoid (binary classification)
-🔹 Transfer Learning (Best Model)
-MobileNetV2 (pretrained)
-Faster training + better accuracy
-📊 Results
- Training Accuracy: ~96–98%
-Validation Accuracy: ~80%
-Good generalization
-Correct real-time predictions
-🌐 Deployment (Streamlit App)
 
-Run the application:
 
+- Images resized to **224 × 224**
+- Pixel values normalized to **[0,1]**
+
+---
+
+## 🧠 Model Architecture
+
+### 🔹 Custom CNN
+- Conv Layers (32, 64, 128 filters)
+- MaxPooling layers
+- Dense + Dropout
+- Output: Sigmoid
+
+### 🔹 Transfer Learning (Best Model)
+- MobileNetV2 (pretrained)
+- Faster training
+- Better accuracy
+
+---
+
+## 📊 Results
+- 🎯 Training Accuracy: ~96–98%
+- 🎯 Validation Accuracy: ~80%
+- ✔ Good generalization
+- ✔ Real-time prediction working
+
+---
+
+## 🌐 Deployment
+
+Run the app:
+
+```bash
 streamlit run app.py
- How it works:
-Upload an image
+💡 How it works:
+Upload image
 Model processes it
 Output shows:
-Bird 🐦
-Drone 🚁
+🐦 Bird
+🚁 Drone
 Confidence score
 📁 Project Structure
 SkyGuard-AI/
@@ -76,7 +100,7 @@ SkyGuard-AI/
 └── README.md
 📈 Model Evaluation
 
-Evaluation performed using:
+Used:
 
 classification_report(y_true, y_pred)
 
@@ -87,27 +111,15 @@ Precision
 Recall
 F1-score
 ⚠️ YOLOv8 (Optional)
-YOLOv8 was explored for object detection
-Requires bounding box annotations (.txt labels)
+Explored YOLOv8 for object detection
+Requires bounding box annotations
 Current dataset is classification-based
-
- Hence, YOLO is included as future enhancement
-
-🎯 Applications
-✈️ Airport bird detection
-🛡️ Drone surveillance
-🌿 Wildlife research
-🚁 Airspace monitoring
 🔮 Future Work
-Add YOLOv8 object detection
-Improve dataset with bounding boxes
+Add YOLO detection
+Improve dataset
 Real-time video detection
-Deploy on cloud (AWS/Heroku)
- Author
+Cloud deployment
+👨‍💻 Author
 
 Vijay Prajapati
 Electrical Engineering – NIT Goa
-
- Acknowledgment
-
-This project was developed as part of an internship in Deep Learning & Computer Vision.
