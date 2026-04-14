@@ -1,8 +1,6 @@
 import tensorflow as tf
 from utils import load_data
-
-load_data(r"C:\Users\praja\OneDrive\Desktop\LM\Project3\train", r"C:\Users\praja\OneDrive\Desktop\LM\Project3\valid")
-
+train, val = load_data("train", "valid")
 model = tf.keras.Sequential([
     tf.keras.layers.Conv2D(32, (3,3), activation='relu', input_shape=(224,224,3)),
     tf.keras.layers.MaxPooling2D(),
